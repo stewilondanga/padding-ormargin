@@ -62,12 +62,12 @@ hr {
   background-color: #eee;
 }
 
-/*.padding-box, .margin-box{
+.padding-box, .margin-box {
   display: inline-block;
   border: 2px solid #d8645d;
 }
 
-.padding-box.explanation{
+/*.padding-box.explanation{
   background-color: #93bcff;
 }
 
