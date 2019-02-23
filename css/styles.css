@@ -31,7 +31,7 @@ h4 {
   color: #e33;
 }
 
-/*section{
+section {
   margin: 40px auto;
   padding: 0px 10px 20px;
   border: 1px solid #ccc;
@@ -39,7 +39,7 @@ h4 {
   max-width: 550px;
 }
 
-p{
+/*p{
   font-size: 13px;
   margin: 15px auto;
 }
