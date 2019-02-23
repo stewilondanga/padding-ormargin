@@ -10,98 +10,103 @@
 <body>
 
   <div class="my_social">
-      <a href="https://www.linkedin.com/in/stewart-ilondanga-336b2743/" class="social">
-          <img src="https://i.imgsafe.org/85/857cb1a42e.png" alt="linkedin"></img>
-        </a>
-      <a href="https://stewilondanga.github.io/" class="social">
-          <img src="https://i.imgsafe.org/8d/8d745a5c82.png" alt="github"></img>
-        </a>
-      <a href="https://twitter.com/stew_ilondanga" class="social">
-          <img src="https://i.imgsafe.org/43/431dd07874.png" alt="twitter"></img>
-        </a>
+    <a href="https://www.linkedin.com/in/stewart-ilondanga-336b2743/" class="social">
+      <img src="https://i.imgsafe.org/85/857cb1a42e.png" alt="linkedin"></img>
+    </a>
+    <a href="https://stewilondanga.github.io/" class="social">
+      <img src="https://i.imgsafe.org/8d/8d745a5c82.png" alt="github"></img>
+    </a>
+    <a href="https://twitter.com/stew_ilondanga" class="social">
+      <img src="https://i.imgsafe.org/43/431dd07874.png" alt="twitter"></img>
+    </a>
+  </div>
+
+  <h2>Padding & Margin | pt-BR</h2>
+  <section class="take-look">
+    <h3>Comparação</h3>
+    <p>O formato de elementos padrões no CSS são retângulos (vou chamar de box aqui).</p>
+    <p>Vamos dar uma olhada nessas boxes com seus limites a mostra (em vermelho).</p>
+    <div class="padding-box">.padding-box</div>
+    <div class="margin-box">.margin-box</div>
+    <p>As duas tem os valores das suas propriedades com 20px, mas a primeira usa como propriedade o padding e a segunda usa a margin. Dá só uma olhada:</p>
+    <style>
+      .padding-box {
+        padding: 20px;
+      }
+
+      .margin-box {
+        margin: 20px;
+      }
+    </style>
+  </section>
+
+  <section class="take-look">
+    <h3>Padding</h3>
+    <p>Vamos começar com o <strong>padding</strong>:</p>
+    <div class="padding-box explanation">
+      <span>.padding-box</span>
     </div>
+    <p>A parte azul é espaço entre o limite do box e o real conteudo dele, o e essa parte azul é criada pelo valor que você define com o padding. Por tanto, </p>
+    <strong class="meaning">Padding é a distância entre o conteúdo de um box e seus limites.</strong>
+    <hr />
+    <h4>*use com cuidado!</h4>
+    <div class="padding-example">.padding-example</div>
+    <div class="with-padding">.with-padding</div>
+    <style>
+      .padding-example,
+      .with-padding {
+        width: 140px;
+        height: 50px;
+      }
 
-    <h2>Padding & Margin | pt-BR</h2>
-    <section class="take-look">
-      <h3>Comparação</h3>
-      <p>O formato de elementos padrões no CSS são retângulos (vou chamar de box aqui).</p>
-        <p>Vamos dar uma olhada nessas boxes com seus limites a mostra (em vermelho).</p>
-      <div class="padding-box">.padding-box</div>
+      .with-padding {
+        padding: 10px;
+      }
+    </style>
+    <p>A gente vê que o width e o height são os mesmos, mas eles tem tamanhos direfentes.<br>Isso acontece porque...</p>
+    <strong class="meaning">O padding aumenta a largura e altura do elemento.</strong>
+    <h3>Como resolver?</h3>
+    <strong>box-sizing: border-box;</strong>
+    <p>Essa propriedade inclui o padding e a borda do elemento no seu tamanho. Seria uma formula assim:<br />TamanhoTotal = Padding + BorderSize + Tamanho</p>
+
+    <div class="padding-example">.padding-example</div>
+    <div class="with-padding with-box-sizing">.with-box-sizing</div>
+    <style>
+      .padding-example,
+      .with-box-sizing {
+        width: 140px;
+        height: 50px;
+      }
+
+      .with-box-sizing {
+        padding: 10px;
+        box-sizing: border-box;
+      }
+    </style>
+  </section>
+  <section>
+    <h3>Margin</h3>
+    <div class="exemple-margin">Elemento em cima</div>
+    <div class="margin-box explanation">
       <div class="margin-box">.margin-box</div>
-      <p>As duas tem os valores das suas propriedades com 20px, mas a primeira usa como propriedade o padding e a segunda usa a margin. Dá só uma olhada:</p>
-      <style>
-        .padding-box{
-          padding: 20px;
-        }
-
-        .margin-box{
-          margin: 20px;
-        }
-      </style>
-    </section>
-
-    <section class="take-look">
-      <h3>Padding</h3>
-      <p>Vamos começar com o <strong>padding</strong>:</p>
-      <div class="padding-box explanation">
-        <span>.padding-box</span>
-      </div>
-      <p>A parte azul é espaço entre o limite do box e o real conteudo dele, o e essa parte azul é criada pelo valor que você define com o padding. Por tanto, </p>
-      <strong class="meaning">Padding é a distância entre o conteúdo de um box e seus limites.</strong>
-      <hr/>
-      <h4>*use com cuidado!</h4>
-      <div class="padding-example">.padding-example</div>
-      <div class="with-padding">.with-padding</div>
-      <style>
-        .padding-example, .with-padding {
-          width: 140px;
-          height: 50px;
-        }
-        .with-padding{
-          padding: 10px;
-        }
-      </style>
-      <p>A gente vê que o width e o height são os mesmos, mas eles tem tamanhos direfentes.<br>Isso acontece porque...</p>
-        <strong class="meaning">O padding aumenta a largura e altura do elemento.</strong>
-      <h3>Como resolver?</h3>
-      <strong>box-sizing: border-box;</strong>
-      <p>Essa propriedade inclui o padding e a borda do elemento no seu tamanho. Seria uma formula assim:<br/>TamanhoTotal = Padding + BorderSize + Tamanho</p>
-
-      <div class="padding-example">.padding-example</div>
-      <div class="with-padding with-box-sizing">.with-box-sizing</div>
-      <style>
-        .padding-example, .with-box-sizing {
-          width: 140px;
-          height: 50px;
-        }
-        .with-box-sizing{
-          padding: 10px;
-          box-sizing: border-box;
-        }
-      </style>
-    </section>
-    <section>
-      <h3>Margin</h3>
-      <div class="exemple-margin">Elemento em cima</div>
-      <div class="margin-box explanation">
-        <div class="margin-box">.margin-box</div>
-      </div>
-      <div class="exemple-margin">Elemento em baixo</div>
-      <p>Agora a gente pode ver que a parte azul está como se fosse uma "borda" e isso é a margin. Você pode ver que é o margin que distancia o nosso elemento de margin dos elementos de exemplo. Ou seja ...</p>
-      <strong class="meaning">Margin é o espaço do elemento para outros elementos.</strong>
-     </section>
+    </div>
+    <div class="exemple-margin">Elemento em baixo</div>
+    <p>Agora a gente pode ver que a parte azul está como se fosse uma "borda" e isso é a margin. Você pode ver que é o margin que distancia o nosso elemento de margin dos elementos de exemplo. Ou seja ...</p>
+    <strong class="meaning">Margin é o espaço do elemento para outros elementos.</strong>
+  </section>
 
   <section id="contact">
     <div class="overlay">
       <div class="containers">
 
         <h1>
-<script>
-with(new Date)c=-new Date(y=getFullYear(),m=getMonth()).getDay(x=new Date(y,++m,0).getDate(b=-1))
-h='<table class="cal"><caption> <em>Stewart ilondanga</em> &#169 '+' '+y+'/'+m+'<tr>'+'SuMoTuWeThFrSa'.replace(/(..)/g,'<th>$1')
-while((b++>5?b=0:b)|c<x)h+=(b?'':'<tr>')+'<td>'+(++c<1|c>x?'-':c);document.write(h+'</table>')
-</script>
-</h1>
+          <script>
+            with(new Date) c = -new Date(y = getFullYear(), m = getMonth()).getDay(x = new Date(y, ++m, 0).getDate(b = -1))
+            h = '<table class="cal"><caption> <em>Stewart ilondanga</em> &#169 ' + ' ' + y + '/' + m + '<tr>' + 'SuMoTuWeThFrSa'.replace(/(..)/g, '<th>$1')
+            while ((b++ > 5 ? b = 0 : b) | c < x) h += (b ? '' : '<tr>') + '<td>' + (++c < 1 | c > x ? '-' : c);
+            document.write(h + '</table>')
+          </script>
+        </h1>
 
       </div>
     </div>
