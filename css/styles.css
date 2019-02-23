@@ -67,11 +67,11 @@ hr {
   border: 2px solid #d8645d;
 }
 
-/*.padding-box.explanation{
+.padding-box.explanation {
   background-color: #93bcff;
 }
 
-.padding-example, .with-padding{
+/*.padding-example, .with-padding{
   margin: 10px auto;
   background-color: #93bcff;
   color: #fff;
