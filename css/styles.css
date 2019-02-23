@@ -48,13 +48,13 @@ span {
   background-color: #fff
 }
 
-/*hr {
+hr {
   border-color: #ccc;
   max-width: 80%;
   margin: 30px auto 5px;
 }
 
-.meaning{
+/*.meaning{
   display: block;
   max-width: 300px;
   margin: 0 auto;
